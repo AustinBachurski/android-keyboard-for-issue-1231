@@ -80,11 +80,11 @@ public abstract class LayoutBase extends AbstractLayoutBase {
         builder.addKeysOnTheRightOfRow(
                 numberOfRows, (Object[])customizer.getKeysRightToSpacebar(isPhone));
         if (isPhone) {
-            builder.addKeysOnTheRightOfRow(numberOfRows - 1, DELETE_KEY)
+            builder.addKeysOnTheRightOfRow(numberOfRows - 1, BACKSPACE_KEY)
                     .addKeysOnTheLeftOfRow(numberOfRows, customizer.getSymbolsKey())
                     .addKeysOnTheRightOfRow(numberOfRows, customizer.getEnterKey(isPhone));
         } else {
-            builder.addKeysOnTheRightOfRow(1, DELETE_KEY)
+            builder.addKeysOnTheRightOfRow(1, BACKSPACE_KEY)
                     .addKeysOnTheRightOfRow(numberOfRows - 2, customizer.getEnterKey(isPhone))
                     .addKeysOnTheLeftOfRow(numberOfRows, customizer.getSymbolsKey())
                     .addKeysOnTheRightOfRow(numberOfRows, customizer.getEmojiKey(isPhone));

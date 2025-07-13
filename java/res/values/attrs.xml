@@ -258,6 +258,7 @@
         <!-- Icon set for key top and key preview. These should be aligned with
              {@link org.futo.inputmethod.keyboard.internal.KeyboardIconsSet#NAMES_AND_ATTR_IDS} -->
         <attr name="iconShiftKey" format="reference" />
+        <attr name="iconBackspaceKey" format="reference" />
         <attr name="iconDeleteKey" format="reference" />
         <attr name="iconSettingsKey" format="reference" />
         <attr name="iconSpaceKey" format="reference" />

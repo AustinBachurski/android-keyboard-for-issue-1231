@@ -53,6 +53,11 @@ val TemplateShiftKey = CaseSelector(
     )
 )
 
+val TemplateBackspaceKey = BaseKey(
+    spec = "!icon/backspace_key|!code/key_backspace",
+    attributes = FunctionalAttributes.copy(repeatableEnabled = true)
+)
+
 val TemplateDeleteKey = BaseKey(
     spec = "!icon/delete_key|!code/key_delete",
     attributes = FunctionalAttributes.copy(repeatableEnabled = true)
@@ -303,6 +308,7 @@ val TemplateOptionalZWNJKey = OptionalZWNJKey()
 
 val TemplateKeys = mapOf(
     "shift" to TemplateShiftKey,
+    "backspace" to TemplateBackspaceKey,
     "delete" to TemplateDeleteKey,
     "space" to TemplateSpaceKey,
     "enter" to TemplateEnterKey,

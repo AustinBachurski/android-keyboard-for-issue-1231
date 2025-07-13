@@ -41,13 +41,13 @@ public class Symbols extends AbstractLayoutBase {
                 customizer.getSingleQuoteMoreKeys(), customizer.getSingleAngleQuoteKeys())));
         if (isPhone) {
             builder.addKeysOnTheLeftOfRow(3, customizer.getSymbolsShiftKey(isPhone))
-                    .addKeysOnTheRightOfRow(3, DELETE_KEY)
+                    .addKeysOnTheRightOfRow(3, BACKSPACE_KEY)
                     .addKeysOnTheLeftOfRow(4, customizer.getAlphabetKey())
                     .addKeysOnTheRightOfRow(4, customizer.getEnterKey(isPhone));
         } else {
             // Tablet symbols keyboard has extra two keys at the left edge of the 3rd row.
             builder.addKeysOnTheLeftOfRow(3, (Object[])joinKeys("\\", "="));
-            builder.addKeysOnTheRightOfRow(1, DELETE_KEY)
+            builder.addKeysOnTheRightOfRow(1, BACKSPACE_KEY)
                     .addKeysOnTheRightOfRow(2, customizer.getEnterKey(isPhone))
                     .addKeysOnTheLeftOfRow(3, customizer.getSymbolsShiftKey(isPhone))
                     .addKeysOnTheRightOfRow(3, customizer.getSymbolsShiftKey(isPhone))

@@ -240,6 +240,7 @@ class BasicThemeProvider(val context: Context, val colorScheme: KeyboardColorSch
 
         addIcon(KeyboardIconsSet.NAME_SHIFT_KEY, R.drawable.shift, onKeyColor)
         addIcon(KeyboardIconsSet.NAME_SHIFT_KEY_SHIFTED, R.drawable.shiftshifted, onKeyColor)
+        addIcon(KeyboardIconsSet.NAME_BACKSPACE_KEY, R.drawable.backspace, onKeyColor)
         addIcon(KeyboardIconsSet.NAME_DELETE_KEY, R.drawable.delete, onKeyColor)
         addIcon(KeyboardIconsSet.NAME_SETTINGS_KEY, R.drawable.settings, onKeyColor)
         addIcon(KeyboardIconsSet.NAME_SPACE_KEY, null, onKeyColor)

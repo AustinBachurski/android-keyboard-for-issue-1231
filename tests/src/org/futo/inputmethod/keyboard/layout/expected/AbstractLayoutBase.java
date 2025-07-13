@@ -118,6 +118,7 @@ public abstract class AbstractLayoutBase {
     }
 
     // Icon ids.
+    private static final String ICON_BACKSPACE = KeyboardIconsSet.NAME_BACKSPACE_KEY;
     private static final String ICON_DELETE = KeyboardIconsSet.NAME_DELETE_KEY;
     private static final String ICON_SPACE = KeyboardIconsSet.NAME_SPACE_KEY;
     private static final String ICON_TAB = KeyboardIconsSet.NAME_TAB_KEY;
@@ -131,6 +132,7 @@ public abstract class AbstractLayoutBase {
     private static final String ICON_ZWJ = KeyboardIconsSet.NAME_ZWJ_KEY;
 
     // Functional keys.
+    protected static final ExpectedKey BACKSPACE_KEY = iconKey(ICON_BACKSPACE, Constants.CODE_BACKSPACE);
     protected static final ExpectedKey DELETE_KEY = iconKey(ICON_DELETE, Constants.CODE_DELETE);
     protected static final ExpectedKey TAB_KEY = iconKey(ICON_TAB, Constants.CODE_TAB);
     protected static final ExpectedKey SETTINGS_KEY = iconKey("action_settings", Constants.CODE_ACTION_0 + ActionRegistry.INSTANCE.actionStringIdToIdx("settings"));

@@ -37,7 +37,7 @@ public class SymbolsShifted extends AbstractLayoutBase {
         builder.replaceKeyOfLabel(OTHER_CURRENCIES, (Object[])customizer.getOtherCurrencyKeys());
         if (isPhone) {
             builder.addKeysOnTheLeftOfRow(3, customizer.getBackToSymbolsKey())
-                    .addKeysOnTheRightOfRow(3, DELETE_KEY)
+                    .addKeysOnTheRightOfRow(3, BACKSPACE_KEY)
                     .addKeysOnTheLeftOfRow(4, customizer.getAlphabetKey())
                     .addKeysOnTheRightOfRow(4, customizer.getEnterKey(isPhone));
         } else {
@@ -45,7 +45,7 @@ public class SymbolsShifted extends AbstractLayoutBase {
             // U+00BF: "¿" INVERTED QUESTION MARK
             // U+00A1: "¡" INVERTED EXCLAMATION MARK
             builder.addKeysOnTheRightOfRow(3, (Object[])joinKeys("\u00A1", "\u00BF"));
-            builder.addKeysOnTheRightOfRow(1, DELETE_KEY)
+            builder.addKeysOnTheRightOfRow(1, BACKSPACE_KEY)
                     .addKeysOnTheRightOfRow(2, customizer.getEnterKey(isPhone))
                     .addKeysOnTheLeftOfRow(3, customizer.getBackToSymbolsKey())
                     .addKeysOnTheRightOfRow(3, customizer.getBackToSymbolsKey())

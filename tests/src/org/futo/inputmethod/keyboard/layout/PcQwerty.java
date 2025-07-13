@@ -128,9 +128,9 @@ public final class PcQwerty extends LayoutBase {
         builder.addKeysOnTheLeftOfRow(5, (Object[])customizer.getKeysLeftToSpacebar(isPhone));
         builder.addKeysOnTheRightOfRow(5, (Object[])customizer.getKeysRightToSpacebar(isPhone));
         if (isPhone) {
-            builder.addKeysOnTheRightOfRow(3, DELETE_KEY);
+            builder.addKeysOnTheRightOfRow(3, BACKSPACE_KEY);
         } else {
-            builder.addKeysOnTheRightOfRow(1, DELETE_KEY)
+            builder.addKeysOnTheRightOfRow(1, BACKSPACE_KEY)
                     .addKeysOnTheLeftOfRow(2, TAB_KEY)
                     .addKeysOnTheRightOfRow(3, ENTER_KEY);
         }
