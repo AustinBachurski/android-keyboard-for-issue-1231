@@ -725,9 +725,13 @@ public final class InputLogic {
         }
 
         switch (event.mKeyCode) {
-            case Constants.CODE_DELETE:
+            case Constants.CODE_BACKSPACE:
                 handleBackspaceEvent(event, inputTransaction, currentKeyboardScriptId);
                 // Backspace is a functional key, but it affects the contents of the editor.
+                inputTransaction.setDidAffectContents();
+                break;
+            case Constants.CODE_DELETE:
+                sendDownUpKeyEvent(KeyEvent.KEYCODE_FORWARD_DEL, 0);
                 inputTransaction.setDidAffectContents();
                 break;
             case Constants.CODE_SHIFT:
@@ -1170,7 +1174,7 @@ public final class InputLogic {
      * @param inputTransaction The transaction in progress.
      */
     private void handleBackspaceEvent(final Event event, final InputTransaction inputTransaction,
-            final int currentKeyboardScriptId) {
+                                      final int currentKeyboardScriptId) {
         mSpaceState = SpaceState.NONE;
         mDeleteCount++;
 
@@ -1183,7 +1187,7 @@ public final class InputLogic {
         // can't go any further back, so we can update right away even if it's a key repeat.
         final int shiftUpdateKind =
                 event.isKeyRepeat() && mConnection.getExpectedSelectionStart() > 0
-                ? InputTransaction.SHIFT_UPDATE_LATER : InputTransaction.SHIFT_UPDATE_NOW;
+                        ? InputTransaction.SHIFT_UPDATE_LATER : InputTransaction.SHIFT_UPDATE_NOW;
         inputTransaction.requireShiftUpdate(shiftUpdateKind);
 
         if (mWordComposer.isCursorFrontOrMiddleOfComposingWord()) {
@@ -1242,9 +1246,9 @@ public final class InputLogic {
                 // (non-revert) backspace handling.
                 if (inputTransaction.mSettingsValues.isSuggestionsEnabledPerUserSettings()
                         && inputTransaction.mSettingsValues.mSpacingAndPunctuations
-                                .mCurrentLanguageHasSpaces
+                        .mCurrentLanguageHasSpaces
                         && !mConnection.isCursorFollowedByWordCharacter(
-                                inputTransaction.mSettingsValues.mSpacingAndPunctuations)) {
+                        inputTransaction.mSettingsValues.mSpacingAndPunctuations)) {
                     final int spaceState = mSpaceState; // Need to preserve space state, which restart resets
                     restartSuggestionsOnWordTouchedByCursor(inputTransaction.mSettingsValues,
                             false /* forStartInput */, currentKeyboardScriptId);
@@ -1314,7 +1318,7 @@ public final class InputLogic {
                 if (inputTransaction.mSettingsValues.isBeforeJellyBean()
                         || inputTransaction.mSettingsValues.mInputAttributes.isTypeNull()
                         || Constants.NOT_A_CURSOR_POSITION
-                                == mConnection.getExpectedSelectionEnd()) {
+                        == mConnection.getExpectedSelectionEnd()) {
                     // There are three possible reasons to send a key event: either the field has
                     // type TYPE_NULL, in which case the keyboard should send events, or we are
                     // running in backward compatibility mode, or we don't know the cursor position.
@@ -1414,9 +1418,9 @@ public final class InputLogic {
                 mSuggestionStripViewAccessor.setNeutralSuggestionStrip();
             } else if (inputTransaction.mSettingsValues.isSuggestionsEnabledPerUserSettings()
                     && inputTransaction.mSettingsValues.mSpacingAndPunctuations
-                            .mCurrentLanguageHasSpaces
+                    .mCurrentLanguageHasSpaces
                     && !mConnection.isCursorFollowedByWordCharacter(
-                            inputTransaction.mSettingsValues.mSpacingAndPunctuations)) {
+                    inputTransaction.mSettingsValues.mSpacingAndPunctuations)) {
                 restartSuggestionsOnWordTouchedByCursor(inputTransaction.mSettingsValues,
                         false /* forStartInput */, currentKeyboardScriptId);
             }
