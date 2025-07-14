@@ -40,6 +40,7 @@ class KeyboardIconsSet {
         const val NAME_SHIFT_KEY: String = "shift_key"
         const val NAME_SHIFT_KEY_SHIFTED: String = "shift_key_shifted"
         const val NAME_DELETE_KEY: String = "delete_key"
+        const val NAME_FORWARD_DELETE_KEY: String = "forward_delete_key"
         const val NAME_SETTINGS_KEY: String = "settings_key"
         const val NAME_SPACE_KEY: String = "space_key"
         const val NAME_SPACE_KEY_FOR_NUMBER_LAYOUT: String = "space_key_for_number_layout"
@@ -61,6 +62,7 @@ class KeyboardIconsSet {
             NAME_SHIFT_KEY,
             NAME_SHIFT_KEY_SHIFTED,
             NAME_DELETE_KEY,
+            NAME_FORWARD_DELETE_KEY,
             NAME_SETTINGS_KEY,
             NAME_SPACE_KEY,
             NAME_SPACE_KEY_FOR_NUMBER_LAYOUT,
