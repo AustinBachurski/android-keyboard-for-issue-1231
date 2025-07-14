@@ -58,6 +58,11 @@ val TemplateDeleteKey = BaseKey(
     attributes = FunctionalAttributes.copy(repeatableEnabled = true)
 )
 
+val TemplateForwardDeleteKey = BaseKey(
+    spec = "!icon/forward_delete_key|!code/key_forward_delete",
+    attributes = FunctionalAttributes.copy(repeatableEnabled = true)
+)
+
 val TemplateSymbolsKey = BaseKey(
     spec = "!text/keylabel_to_symbol|!code/key_switch_alpha_symbol",
     attributes = FunctionalAttributes
@@ -304,6 +309,7 @@ val TemplateOptionalZWNJKey = OptionalZWNJKey()
 val TemplateKeys = mapOf(
     "shift" to TemplateShiftKey,
     "delete" to TemplateDeleteKey,
+    "forwarddelete" to TemplateForwardDeleteKey,
     "space" to TemplateSpaceKey,
     "enter" to TemplateEnterKey,
     "symbols" to TemplateSymbolsKey,

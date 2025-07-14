@@ -236,21 +236,22 @@ public final class Constants {
     public static final int CODE_SWITCH_ALPHA_SYMBOL = -3;
     public static final int CODE_OUTPUT_TEXT = -4;
     public static final int CODE_DELETE = -5;
-    public static final int CODE_SETTINGS = -6;
-    public static final int CODE_SHORTCUT = -7;
-    public static final int CODE_ACTION_NEXT = -8;
-    public static final int CODE_ACTION_PREVIOUS = -9;
-    public static final int CODE_LANGUAGE_SWITCH = -10;
-    public static final int CODE_EMOJI = -11;
-    public static final int CODE_SHIFT_ENTER = -12;
-    public static final int CODE_SYMBOL_SHIFT = -13;
-    public static final int CODE_ALPHA_FROM_EMOJI = -14;
-    public static final int CODE_TO_NUMBER_LAYOUT = -15;
-    public static final int CODE_TO_ALT_0_LAYOUT = -16;
-    public static final int CODE_TO_ALT_1_LAYOUT = -17;
-    public static final int CODE_TO_ALT_2_LAYOUT = -18;
+    public static final int CODE_FORWARD_DELETE = -6;
+    public static final int CODE_SETTINGS = -7;
+    public static final int CODE_SHORTCUT = -8;
+    public static final int CODE_ACTION_NEXT = -9;
+    public static final int CODE_ACTION_PREVIOUS = -10;
+    public static final int CODE_LANGUAGE_SWITCH = -11;
+    public static final int CODE_EMOJI = -12;
+    public static final int CODE_SHIFT_ENTER = -13;
+    public static final int CODE_SYMBOL_SHIFT = -14;
+    public static final int CODE_ALPHA_FROM_EMOJI = -15;
+    public static final int CODE_TO_NUMBER_LAYOUT = -16;
+    public static final int CODE_TO_ALT_0_LAYOUT = -17;
+    public static final int CODE_TO_ALT_1_LAYOUT = -18;
+    public static final int CODE_TO_ALT_2_LAYOUT = -19;
     // Code value representing the code is not specified.
-    public static final int CODE_UNSPECIFIED = -19;
+    public static final int CODE_UNSPECIFIED = -20;
 
     public static final int CODE_ACTION_0 = -1050;
     public static final int CODE_ACTION_MAX = CODE_ACTION_0 + 100;
@@ -270,6 +271,7 @@ public final class Constants {
         case CODE_SWITCH_ALPHA_SYMBOL: return "symbol";
         case CODE_OUTPUT_TEXT: return "text";
         case CODE_DELETE: return "delete";
+        case CODE_FORWARD_DELETE: return "forwardDelete";
         case CODE_SETTINGS: return "settings";
         case CODE_SHORTCUT: return "shortcut";
         case CODE_ACTION_NEXT: return "actionNext";

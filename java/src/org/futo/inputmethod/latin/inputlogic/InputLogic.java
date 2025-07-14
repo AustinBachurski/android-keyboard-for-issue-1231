@@ -730,6 +730,11 @@ public final class InputLogic {
                 // Backspace is a functional key, but it affects the contents of the editor.
                 inputTransaction.setDidAffectContents();
                 break;
+            case Constants.CODE_FORWARD_DELETE:
+                sendDownUpKeyEvent(KeyEvent.KEYCODE_FORWARD_DEL, 0);
+                // Forward Delete is a functional key, but it affects the contents of the editor.
+                inputTransaction.setDidAffectContents();
+                break;
             case Constants.CODE_SHIFT:
                 performRecapitalization(inputTransaction.mSettingsValues);
                 inputTransaction.requireShiftUpdate(InputTransaction.SHIFT_UPDATE_NOW);
